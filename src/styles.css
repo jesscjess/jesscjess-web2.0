@@ -272,7 +272,7 @@ SECTIONS
 #lights img{
   display: block;
   margin: auto;
-  max-height: 70vh;
+  max-height: 50vh;
   max-width: 70%;
 }
 
@@ -287,7 +287,7 @@ SECTIONS
 #camera img{
   display: block;
   margin: auto;
-  max-height: 80vh;
+  max-height: 60vh;
   max-width: 80%;
 }
 
@@ -301,6 +301,18 @@ SECTIONS
 #action img{
   max-height: 90vh;
   max-width: 90%;
+}
+
+#action .after{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+    display: block;
+    background: rgba(0, 0, 0, .6);
 }
 
 section img{
