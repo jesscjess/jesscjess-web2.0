@@ -5,7 +5,8 @@ nav{
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 8;
+  background-color: transparent;
 }
 
 nav #brand{
@@ -17,24 +18,25 @@ nav #brand{
   padding-left: 20px;
 }
 
-nav #brand:hover{
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+nav #brand{
+    -webkit-animation-name: heart; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
-    -webkit-animation-timing-function: ease;
-    animation-name: example;
+    /* -webkit-animation-timing-function: forwards;
+    animation-name: heart;
     animation-duration: 0.5s;
-    animation-timing-function: steps();
+    animation-timing-function: forwards; */
+    animation: heart 5s forwards;
 }
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes heart {
-  from {text-shadow: 2px 2px #FFD500}
-  to {text-shadow: 5px 5px #FFD500}
+  from  { -webkit-transform: scale(0,0) }
+  to {-webkit-transform: scale(3,4) }
 }
 
 /* Standard syntax */
 @keyframes heart {
-  from {transform: scale(2,3)}
-  to {transform: scale(2,6)}
+  from  { transform: scale(0,0) }
+  to {transform: scale(3,4) }
 }
 
 
@@ -43,6 +45,7 @@ nav ul{
   padding: 0;
   bottom: 0;
   position: absolute;
+  width: inherit;
 }
 
 nav li{
@@ -181,6 +184,10 @@ SECTIONS
   font-size: 20%;
 }
 
+.title .follow a{
+  color: #FFD500 ;
+}
+
 .title .follow a:visited{
   color: #FFD500 ;
 }
@@ -275,6 +282,7 @@ SECTIONS
 #lights {
   background-color: #BABABA;
   z-index: 4; /* slide under groups 1 and 3 */
+  height: calc(100% - 210px )
 }
 
 #lights img{
@@ -289,6 +297,7 @@ SECTIONS
 #camera {
   background-color: #79757B;
   z-index: 2; /* slide over group 2 and 4 */
+  height: calc(100% - 105px )
 }
 
 #camera img{
@@ -321,27 +330,75 @@ section img{
 }
 
 @media screen and (max-width: 600px) {
-  /* .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  } */
-/* 
+  nav{
+    width: 30%;
+  }
+
+  body:not(nav){
+    padding-left: 30%;
+  }
+
+  #nav-container{
+    width:100%;
+  }
+    nav ul{
+    width: inherit;
+  }
+
+  nav #brand{
+    font-size: 250%;
+  }
+
   nav li.lights{
-    width: 10%;
+    width: 80%;
     font-size: 100%
   }
 
   nav li.camera{
-    width: 12%;
+    width: 90%;
     font-size: 100%
   }
 
   nav li.action{
-    width: 14%;
+    width: 100%;
     font-size: 100%
-  } */
+  }
 
   .parallax{
     font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav{
+    width: 20%;
+  }
+
+  body:not(nav){
+    padding-left: 20%;
+  }
+
+  #nav-container{
+    width:100%;
+  }
+    nav ul{
+    width: inherit;
+  }
+
+  nav li.lights{
+    width: 80%;
+  }
+
+  nav li.camera{
+    width: 90%;
+  }
+
+  nav li.action{
+    width: 100%;
+  }
+
+
+  nav #brand{
+    font-size: 200%;
   }
 }
