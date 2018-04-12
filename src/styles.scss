@@ -1,0 +1,386 @@
+/* My variables */
+$my-font-fam: 'Open Sans', sans-serif;
+$main-colour: #FFD500;
+$light-grey: #BABABA;
+$mid-grey: #79757B;
+$dark-grey: #544F5B;
+
+/* Nav */
+nav {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  background-color: transparent;
+
+  #brand {
+    color: $light-grey;
+    text-shadow: 2px 2px $main-colour;
+    text-decoration: none;
+    font-size: 400%;
+    padding-left: 20px;
+  }
+
+  #brand:hover {
+    font-size: 450%;
+    color: $main-colour;
+    text-shadow: 2px 2px $light-grey;
+    text-decoration: none;
+    padding-left: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    bottom: 0;
+    position: absolute;
+    width: inherit;
+  }
+
+  li {
+    height: 80px;
+    font-size: 300%;
+    // margin: 25px 0 0;
+    text-align: center;
+    line-height: 80px;
+    float: right;
+    vertical-align: middle;
+
+    .lights {
+      background-color: $light-grey;
+      width: 150px;
+    }
+  }
+
+  li.lights {
+    background-color: $light-grey;
+    width: 150px;
+  }
+
+  li.camera {
+    background-color: $mid-grey;
+    width: 200px;
+  }
+
+  li.action {
+    background-color: $dark-grey;
+    width: 250px;
+  }
+  
+  li a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+}
+
+/* Main style
+--------------------------------------------- */
+body,
+html {
+  overflow: hidden;
+  font-family: $my-font-fam;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body:not(nav) {
+  padding-left: 250px;
+}
+
+.parallax {
+  font-size: 200%;
+  height: 500px;
+  /* fallback for older browsers */
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax__group {
+  position: relative;
+  height: 500px;
+  /* fallback for older browsers */
+  height: 100vh;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.title {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 300%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: $main-colour;
+  text-shadow: 2px 2px #FFFFFF;
+}
+
+/* SECTIONS
+--------------------------------------------- */
+
+section img {
+  position: absolute;
+  display: block;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* JessC Jess */
+
+#jesscjess {
+  background-size: cover;
+  z-index: 4;
+  // padding-left: 250px;
+
+  .title {
+    font-size: 200%;
+    width: 80%;
+    z-index: 6;
+    top: 45%;
+  }  
+
+  .title .tag-line {
+    font-size: 35%;
+  }
+  
+  .title .follow {
+    font-size: 30%;
+  }
+  
+  .title .follow a,
+  .title .follow a:visited {
+    color: $main-colour;
+  }
+  
+  .title .follow a:hover {
+    color: $dark-grey;
+  }
+
+  .triangle-sided-top {
+    height: 0;
+    width: 0;
+    border-top: 80px solid $main-colour;
+    border-top: 15vh solid $main-colour;
+    border-right: 100px solid transparent;
+    border-right: 40vh solid transparent;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* box-shadow: 5px 10px #FFFFFF; */
+  }
+  
+  .triangle-sided-top:hover {
+    -webkit-animation-name: top;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: ease;
+    animation-name: top;
+    animation-duration: 0.5s;
+    animation-timing-function: steps();
+  }
+  
+  .triangle-sided-bottom {
+    height: 0;
+    width: 0;
+    border-bottom: 100px solid $main-colour;
+    border-bottom: 25vh solid $main-colour;
+    border-left: 200px solid transparent;
+    border-left: 40vh solid transparent;
+    position: absolute;
+    left: 65%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* box-shadow: 5px 10px #FFFFFF; */
+  }
+  
+  .triangle-sided-bottom:hover {
+    -webkit-animation-name: bottom;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: ease;
+    animation-name: bottom;
+    animation-duration: 0.5s;
+    animation-timing-function: steps();
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  
+  @-webkit-keyframes top {
+    from {
+      transform: translate(-50%, -50%)
+    }
+    to {
+      transform: rotate(-20deg)
+    }
+  }
+  
+  /* Standard syntax */
+  
+  @keyframes top {
+    from {
+      transform: translate(-50%, -50%)
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-20deg)
+    }
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  
+  @-webkit-keyframes bottom {
+    from {
+      transform: translate(-50%, -50%)
+    }
+    to {
+      transform: rotate(20deg)
+    }
+  }
+  
+  /* Standard syntax */
+  
+  @keyframes bottom {
+    from {
+      transform: translate(-50%, -50%)
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(20deg)
+    }
+  }
+}
+
+#lights {
+  background-color: $light-grey;
+  z-index: 4;
+  height: calc(100% - 160px);
+  // margin-left: 100px;
+
+  img {
+    display: block;
+    margin: auto;
+    max-height: 50vh;
+    max-width: 70%;
+  }
+}
+
+/* Camera */
+
+#camera {
+  background-color: $mid-grey;
+  z-index: 2;
+  height: calc(100% - 80px);
+  // margin-left: 50px;
+
+  img {
+    display: block;
+    margin: auto;
+    max-height: 60vh;
+    max-width: 80%;
+  }
+}
+
+/* Action */
+
+#action {
+  background-color: $dark-grey;
+  z-index: 1;
+
+  img {
+    max-height: 90vh;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body:not(nav) {
+    padding-left: 30%;
+  }
+
+  .parallax {
+    font-size: 100%;
+  }
+
+  #nav-container {
+    width: 100%;
+  }
+
+  nav {
+    width: 30%;
+
+    ul {
+      width: inherit;
+    }
+
+    #brand {
+      font-size: 250%;
+    }
+
+    li.lights {
+      width: 80%;
+      font-size: 100%
+    }
+
+    li.camera {
+      width: 90%;
+      font-size: 100%
+    }
+
+    li.action {
+      width: 100%;
+      font-size: 100%
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body:not(nav) {
+    padding-left: 20%;
+  }
+
+  #nav-container {
+    width: 100%;
+  }
+
+  nav {
+    width: 20%;
+
+    ul {
+      width: inherit;
+    }
+
+    li.lights {
+      width: 80%;
+    }
+
+    li.camera {
+      width: 90%;
+    }
+
+    li.action {
+      width: 100%;
+    }
+
+    #brand {
+      font-size: 200%;
+    }
+  }  
+}
