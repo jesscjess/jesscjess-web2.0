@@ -58,7 +58,7 @@ nav {
     a[href="#action"] {
         background-color: $dark-grey;
         width: 250px;
-    } 
+    }
 }
 
 /* Main style
@@ -123,8 +123,8 @@ body:not(nav) {
     position: relative;
     align-items: center;
     justify-content: center;
-    .after{
-      display: none;
+    .after {
+        display: none;
     }
     a,
     a:visited {
@@ -327,18 +327,21 @@ section img {
         #brand {
             font-size: 250%;
         }
-        li.lights {
+        a {
+            font-size: 150%;
+        }
+        a[href="#lights"] {
             width: 80%;
-            font-size: 100%
         }
-        li.camera {
+        a[href="#camera"] {
             width: 90%;
-            font-size: 100%
         }
-        li.action {
+        a[href="#action"] {
             width: 100%;
-            font-size: 100%
         }
+    }
+    .image-container:hover .after {
+        max-width: 50%;
     }
 }
 
@@ -354,13 +357,19 @@ section img {
         ul {
             width: inherit;
         }
-        li.lights {
+        #brand {
+            font-size: 250%;
+        }
+        a {
+            font-size: 100%;
+        }
+        a[href="#lights"] {
             width: 80%;
         }
-        li.camera {
+        a[href="#camera"] {
             width: 90%;
         }
-        li.action {
+        a[href="#action"] {
             width: 100%;
         }
         #brand {
